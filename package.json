@@ -1,0 +1,29 @@
+{
+  "name": "appointment-management",
+  "version": "1.0.0",
+  "description": "Personal practice of the MERN stack to create a basic CRUD system where the user can manage a clinic",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gtifaro/Appointment-Management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gtifaro/Appointment-Management/issues"
+  },
+  "homepage": "https://github.com/Gtifaro/Appointment-Management#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
