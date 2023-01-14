@@ -6,11 +6,13 @@ const { mongoose } = require("./database");
 
 //Config
 app.set("port", process.env.PORT || 3000);
-app.use("/api/users", require("./routes/users.routes"));
 
 //Watching tools
 app.use(morgan("dev"));
 app.use(express.json());
+
+//Routes
+app.use("/api/users", require("./routes/users.routes"));
 
 //Static
 app.use(express.static(path.join(__dirname, "public")));
