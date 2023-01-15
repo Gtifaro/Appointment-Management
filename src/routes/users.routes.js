@@ -26,14 +26,30 @@ router.get("/:id", async (req, res) => { //Get user by ID
     }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res) => {//Create User
     const {email, password} = req.body; 
     const newUser = new User({email, password});
-    newUser.save();
+    newUser.save().catch(e => {});
     res.json({
         status: 200,
-        message: "User Created",
-        body: newUser
+        message: "Successful"
+    });
+});
+
+router.put("/:id", async (req, res) => {//Edit user by ID
+    const {email, password} = req.body; 
+    await User.findByIdAndUpdate(req.params.id, {email, password}).catch(e => {});
+    res.json({
+        status: 200,
+        message: "Successful"
+    });
+});
+
+router.delete("/:id", async (req, res) => {//Delete user by ID
+    await User.findByIdAndDelete(req.params.id).catch(e => {});
+    res.json({
+        status: 200,
+        message: "Successful"
     });
 });
 
