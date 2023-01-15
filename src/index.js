@@ -13,6 +13,7 @@ app.use(express.json());
 
 //Routes
 app.use("/api/users", require("./routes/users.routes"));
+app.use("/api/medics", require("./routes/medics.routes"));
 
 //Static
 app.use(express.static(path.join(__dirname, "public")));
