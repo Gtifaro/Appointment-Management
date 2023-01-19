@@ -5,7 +5,7 @@ const PatientSchema = new Schema({
     name: {type: "String", require: true},
     creationDate: {type: "String", require: true},
     birthDate: {type: "String", require: true},
-    clinicalHistoryID: {type: "Int", require: true},
+    clinicalHistoryID: {type: "Number", require: true},
     lastRevisionDate: {type: "String", require: true},
 });
 
