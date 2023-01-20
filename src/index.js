@@ -17,6 +17,8 @@ app.use("/api/medics", require("./routes/medics.routes"));
 app.use("/api/patients", require("./routes/patients.routes"));
 app.use("/api/offices", require("./routes/offices.routes"));
 app.use("/api/appointments", require("./routes/appointments.routes"));
+app.use("/api/treatments", require("./routes/treatments.routes"));
+app.use("/api/medicines", require("./routes/medicines.routes"));
 
 //Static
 app.use(express.static(path.join(__dirname, "public")));
