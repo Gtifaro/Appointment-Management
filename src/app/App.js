@@ -1,7 +1,12 @@
 import React from "react";
+import { Header } from "./components/header/Header";
 
 export const App = () => {
     return (
-        <h1>Hola mundo</h1>
+        <React.Fragment>
+            <div className="App">
+                <Header/>
+            </div>
+        </React.Fragment>
     )
 }
